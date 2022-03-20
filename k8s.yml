@@ -6,28 +6,28 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: bye2-world
+      app: bye-world
   template:
     metadata:
       labels:
-        app: bye3-world
+        app: bye-world
     spec:
       containers:
       - image: okteto/hello-world:php
-        name: bye4-world
+        name: bye-world
 
 ---
 
 apiVersion: v1
 kind: Service
 metadata:
-  name: bye5-world
+  name: bye-world
   annotations:
     dev.okteto.com/auto-ingress: "true"
 spec:
   type: ClusterIP  
   ports:
-  - name: "bye6-world"
+  - name: "bye-world"
     port: 8080
   selector:
-    app: bye7-world
+    app: bye-world
