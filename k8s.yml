@@ -30,4 +30,4 @@ spec:
   - name: "hello-world"
     port: 8080
   selector:
-    app: bye-world
+    app: hello-world
